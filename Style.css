@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+ul {
+ list-style: none;
+}
+
+a {
+ text-decoration: none;
+}
+
+button,
+input {
+ appearance: none;
+ border: none;
+ background: none;
+ font-family: inherit;
+ font-size: inherit;
+ color: inherit;
+}
+
+:root {
+    /*Colors*/
+    --primary-color: #EB6E46 ;
+    --secondary-color: #FFF1ED;
+    --white-color: #FFFFFF;
+    --gray-color: #757B8A;
+    --black-color: #101010;
+    --text-font: 'inter', sans-serif;
+    --title-font: 'Archivo', sans-serif;
+}
+
+body {
+    
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--black-color);
+    line-height: 120%;
+    font-family: var(--title-font);
+
+}
+
+.light-text {
+    font-size: 1rem;
+    font-weight:500;
+    color: var(--gray-color);
+    font-family: var(--text-font);
+    line-height: 160%;
+}
+
+.btn{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+}
