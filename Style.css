@@ -180,6 +180,7 @@ header{
 
 .brands-in{
      margin-top: solid 5px #000;
+     height: 344px;
 }
 
 .brands-line{
@@ -190,6 +191,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
 }
 
 .logo-card{
