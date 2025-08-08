@@ -2,10 +2,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 * {
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ list-style: none;
+}
+
+:root {
+    /*Colors*/
+    --primary-color: #EB6E46 ;
+    --secondary-color: #FFF1ED;
+    --white-color: #FFFFFF;
+    --gray-color: #757B8A;
+    --black-color: #101010;
+    /*Fonts*/
+    --text-font: 'Inter', sans-serif;
+    --title-font: 'Archivo';
 }
 
 ul {
@@ -16,8 +30,7 @@ a {
  text-decoration: none;
 }
 
-button,
-input {
+button, input {
  appearance: none;
  border: none;
  background: none;
@@ -26,23 +39,12 @@ input {
  color: inherit;
 }
 
-:root {
-    /*Colors*/
-    --primary-color: #EB6E46 ;
-    --secondary-color: #FFF1ED;
-    --white-color: #FFFFFF;
-    --gray-color: #757B8A;
-    --black-color: #101010;
-    --text-font: 'Inter', sans-serif;
-    --title-font: 'Archivo';
-}
-
 html, body{
     overflow-x: hidden;
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 32px;
     font-weight: 700;
     color: var(--black-color);
     line-height: 120%;
@@ -66,17 +68,20 @@ html, body{
 }
 
 .btn{
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     font-family: var(--text-font);
     color: var(--white-color);
     background-color: var(--primary-color);
     padding: 1rem 2rem;
     border-radius: 100px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    line-height: 150%;
+    width: 182px;
+    align-items: center;
+    justify-content: center; 
 }
 
+/*============================ Header */
 
 header{
     background-color: var(--secondary-color);
@@ -86,7 +91,7 @@ header{
 .header-in{
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,6 +102,8 @@ header{
     height: auto;
 }
 
+/*============================ Hero Banner */
+
 .hero-banner{
     background-color: var(--secondary-color);
     display: flex;
@@ -104,7 +111,7 @@ header{
 }
 
 .hero-main-content {
-    padding: 24px;
+    padding: 24px 1.2rem;
 }
 
 .hero-banner h1{
@@ -113,18 +120,22 @@ header{
     font-weight: 700;
     line-height: 120%;
     color: var(--black-color);
+    padding-top: 1rem;
 }
 
 .hero-main-content p {
-    padding: 24px 0 ;
+    padding: 1.2rem 0 ;
 
 }
 
 .btn-container{
     position: relative;
     display: inline-block;
-    margin: 24px 0;
+    margin-top: 1.6rem;
+    padding-bottom: 1.5rem;
 }
+
+ 
 
 .btn-container::before{
     content: '';
@@ -132,7 +143,7 @@ header{
     background-image: url('./Images/Arrow.png');
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
+    position: absolute bottom;
     left: 110%;
     transform: translateY(-50%);
     width: 6rem;
@@ -158,7 +169,7 @@ header{
     height: 425px;
 }
 
-
+/*============================ Brands */
 
 #oyo-logo{
     display: none;
@@ -174,31 +185,50 @@ header{
     height: auto;
 }
 
-#brands{
-    margin: 1rem;
-}
-
 .brands-in{
-     margin-top: solid 5px #000;
-     height: 344px;
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.brands-line{
-   
-    width: 100%;
-    max-width: 1200px; 
-    display: flex;
+.brands-line{ 
+    justify-content: center; 
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
+    padding: 3.5rem 0 3rem;
+    display: flex;
+    
+}
+.brands-line ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; 
 }
 
 .logo-card{
     width: 170px;
     height: auto;
+    filter: drop-shadow(0px 40px 40px rgba(212, 217, 232, 0.20));
 }
 
+/*============================ eatures */
+.features-in .title{
+    text-align: center;
+    padding: 5rem 1rem 4rem;
+}
 
+.feature-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 4.5rem;
+}
 
+.feature-card img{
+    padding-bottom: 3rem;
+}
 
+.feature-card p{
+    margin-top: 1rem ;
+}
