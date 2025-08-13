@@ -347,9 +347,6 @@ header{
 }
 
 .btn-holder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 4.5rem;
 }
 
@@ -396,7 +393,14 @@ header{
 /*============================ FAQ */
 .faq {
     border-top: solid 1px #000;
-    border-bottom: solid 1px #000;
+    padding-top: 15vw;
+    margin-bottom: 3rem;
+}
+
+.faq-in h2{
+    text-align: center;
+    padding: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .faq h3{
@@ -408,10 +412,6 @@ header{
 .faq-item p{
     margin-right: 3.5rem;
     font-weight: 500;
-}
-.faq-in h2{
-    text-align: center;
-    padding: 24px;
 }
 
 .faq-list{
@@ -444,6 +444,105 @@ header{
 }
 
 
+/*============================ FAQ */
+.contact{
+    display: flex;
+    justify-content: center;
+    border-top: solid 1px #000;
+} 
+.contact-in{
+    margin: 24vw 0;
+    background-color: var(--primary-color);
+    border-radius: 16px ;
+    width: 328px;
+ }
 
+ .contact-content{
+    margin-left: 1rem;
+ }
+
+ .contact-content p{
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    max-width: 650px;
+ }
+
+ .contact-content h2{
+    color: var(--white-color);
+    padding: 0 2rem;
+    margin-top: 2rem;
+    max-width: 650px;
+ }
+
+ .contact-content .btn {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+ }
+
+ .contact-content .contact-btn-holder {
+    padding: 2rem;
+    margin-bottom: 1rem;
+ }
+
+
+ /*============================ Footer*/
+.footer-in{
+    background-color: var(--secondary-color);
+    padding: 0 24px;
+    border-top: solid 1px #000;
+}
+
+.footer-list{
+    display: none;
+}
+
+.footer-socials img{
+    width: 20px;
+    height: auto;
+}
+
+.footer-form{
+   font-family: var(--text-font); 
+   border-bottom: solid 1px var(--gray-color);
+   padding: 1rem 0;
+   margin: 1rem 0;
+}
+
+.footer-in button{
+    width: fit-content;
+    margin-bottom: 15vw;
+}
+.footer-socials{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 2rem;
+}
+
+.footer-content h3 {
+   padding-top: 15vw;
+   margin-bottom: 3vw;
+   width: 200px;
+}
+
+.footer-terms ul{
+    font-family: var(--text-font);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.footer-terms li a{
+    color: var(--black-color);
+}
+
+.footer-copyright p{
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
 
 
