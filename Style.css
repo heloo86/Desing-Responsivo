@@ -146,24 +146,81 @@ header{
 
 /*----------- Desktop ----------------------------------------------------------*/
 
-@media (min-width: 768px) {
+@media screen and (min-width: 992px) {
 
-  .menu-toggle {
-    display: none; 
-  }
+    /* ================ HEADER ================ */
+    /* Esconde o ícone de menu "hambúrguer" no desktop */
+    .menu-toggle {
+        display: none;
+    }
 
-  .menu-desktop ul {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 2rem;  
-  }
+    /* Exibe o menu de navegação principal no desktop */
+    .menu-desktop {
+        display: block;
+    }
+
+    .menu-desktop nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 45px; /* Define o espaçamento entre os itens do menu */
+        margin: 0;
+        padding: 0;
+    }
 
 
-  .header-in {
-    justify-content: space-between;
-    align-items: center;
-  }
+    /* ================ HERO SECTION ================ */
+    #hero {
+        /* Aumenta o padding lateral para a tela maior */
+        padding: 10px 40px;
+    }
+
+    .hero-in {
+        /* Aumenta a largura máxima do container principal e o centraliza */
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    /* ================ HERO BANNER LAYOUT ================ */
+    .hero-banner-in {
+        display: flex; /* Transforma o layout em duas colunas */
+        align-items: center; /* Alinha verticalmente o texto e a imagem */
+        gap: 3rem; /* Cria um espaço entre as colunas de texto e imagem */
+        padding: 3rem 0; /* Adiciona espaçamento vertical para respiro */
+    }
+
+    .hero-main-content {
+        flex-basis: 45%; /* Define que a coluna de texto ocupará 45% do espaço */
+        margin-top: 0; /* Remove a margem superior desnecessária no desktop */
+    }
+
+    .img-holder {
+        flex-basis: 55%; /* Define que a coluna da imagem ocupará 55% do espaço */
+        height: auto; /* Permite que a altura se ajuste */
+        margin-bottom: 0; /* Remove a margem inferior desnecessária */
+    }
+
+
+    /* ================ ELEMENTOS E TIPOGRAFIA ================ */
+    .hero-banner h1 {
+        font-size: 3.7rem;
+    }
+
+    .btn-container {
+        margin-bottom: 0; 
+    }
+
+
+    .btn-container::before {
+        left: 190px;
+        top: 20px;
+        transform: translateY(-50%);
+    }
+
+    .hero-main-image {
+        background-size: contain; 
+        height: 450px; 
+    }
 }
 
 
