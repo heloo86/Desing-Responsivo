@@ -264,37 +264,42 @@ header{
     height: 425px;
 }
 
-/*------------ DESKTOP -------------------------------------------------------*/
+/*------------ DESKTOP (Layout de Precisão) -------------------------------------------------------*/
 
 @media screen and (min-width: 848px) {
-
-    .hero-banner{
-        max-width: 1200px;
-        padding-bottom: 100px;
+    #hero {
+        padding-bottom: 60px;
+    }
+    
+    #hero .img-holder {
+        flex-basis: 50%; 
+        flex-shrink: 0;
+        height: auto; 
+        
+        justify-content: flex-end;
     }
 
-    .hero-banner h1{
+    .hero-main-content h1{
         font-size: 72px;
-        margin-top: 128px;
         line-height: 110%;
+        margin-top: 8rem;
     }
 
-    .hero-banner p{
-        padding: 32px 0;
-        max-width: 455px ;
+    .hero-banner p {
+        padding: 32px 0;;
+        max-width: 455px;
     }
-
-    .btn-container::before{
+    
+    .btn-container::before {
         left: 220px;
         top: 8px;
     }
-
-    .img-holder{
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
     
+    .hero-main-image {
+        justify-content: flex-end;
+        background-size: contain; 
+        height: 690px; /
+    }
 }
 
 /*================ BRANDS =================================================================================================================================================== */
@@ -616,46 +621,43 @@ header{
 .team-in {
     border-top: solid 1px #000;
     margin-top: 5rem;
-    padding-bottom: 5rem; /* Adiciona espaço no final da seção */
+    padding-bottom: 18px; 
 }
 
 .team-header {
    padding: 0 1.5rem;
    margin-top: 70px;
-   margin-bottom: 40px; /* Aumenta o espaço antes do card */
+   margin-bottom: 40px; /
 }
 
 .team-header .title {
     margin-bottom: 1rem;
 }
 
-/* --- MELHORIA MOBILE: Esconde os outros cards --- */
+
 .team-list > .profile-card:not(:first-child) {
     display: none;
 }
 
 .team-list {
-    display: flex; /* Flex para centralizar o único card visível */
+    display: flex; 
     justify-content: center;
-    padding: 0 1.5rem; /* Garante que o card não toque as bordas */
+    padding: 0 1.5rem; 
 }
 
 .profile-card {
-    text-align: left; /* Garante que o texto dentro do card comece à esquerda */
+    text-align: left;
 }
 
 .profile-card img {
-    /* Torna a imagem responsiva e limita seu tamanho no mobile */
-    width: 100%; 
-    max-width: 329px;
+    width: 329px;
     height: auto;
-    border-radius: 16px; /* Borda arredondada para todos os tamanhos */
 }
 
 .profile-card h3 {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    font-size: 20px; /* Tamanho de fonte consistente */
+    font-size: 20px; 
 }
 
 
@@ -667,9 +669,10 @@ header{
     .team-header {
         display: flex;
         justify-content: space-between; 
+        gap:200px;
         align-items: flex-start; 
         max-width: 1170px; 
-        margin: 110px auto 60px; 
+        margin: 110px auto 70px; 
         padding: 0;
     }
 
@@ -679,8 +682,8 @@ header{
     }
 
     .team-header .light-text {
-        flex-basis: 45%; 
-        margin: 0;
+        flex-basis: 35%; 
+        margin-top: 2rem;
     }
 
    
@@ -692,10 +695,11 @@ header{
     .team-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
-        gap: 30px; 
-        max-width: 1016px; 
+        gap: 32px; 
+        max-width: 1190px; 
         margin: 0 auto; 
         padding: 0;
+        padding-left: 1rem;
     }
 
     
@@ -704,63 +708,84 @@ header{
     }
 }
 
-/*================ FAQ =================================================================================================================================================== */
+/*================ FAQ ================================================================================================================================= */
 
 .faq {
     border-top: solid 1px #000;
-    padding-top: 45px;
+    padding-top: 5rem;
     margin-bottom: 97px;
 }
 
-.faq-in h2{
+.faq-in h2 {
     text-align: center;
-    padding: 24px;
+    padding: 0 24px;
     margin-bottom: 32px;
 }
 
-.faq h3{
-    font-size: 16px;
-    line-height: 140% ;
-    margin-bottom: 1rem;
-}
-
-.faq-item p{
-    margin-right: 3.5rem;
-    font-weight: 500;
-}
-
-.faq-list{
+.faq-list {
     display: flex;
     flex-direction: column;
     max-width: 700px;
-    margin: 0 auto;
     width: 87%;
+    margin: 0 auto;
 }
 
-.item-header{
+.faq-item .text {
+    margin-top: 1rem;
+}
+
+
+.faq-list > .faq-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.faq-list > .faq-item:not(:first-child){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
 }
 
 .faq-item {
-    margin-bottom: 20px;
-    padding-right: auto;
-    align-items: center;
+   
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.faq h3 {
+    font-size: 16px;
+    line-height: 140%;
 }
 
 .list-icon {
-    padding-left: 2rem;
-    margin-bottom: 15px;
+    flex-shrink: 0;
+    margin-left: 1.5rem;
 }
 
 
+/*------------ DESKTOP -------------------------------------------------------*/
+
+@media screen and (min-width: 848px) {
+    .faq{
+        border-top: none
+    }
+
+    .faq-in h2 {
+        max-width: 500px;
+        margin: 7rem auto;
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .faq-list {
+        max-width: 1016px;
+        padding-left: 24px;
+        gap: 0; 
+    }
+
+    .faq-item .text {
+        max-width: 800px;
+    }
+
+    .faq h3 {
+       font-size: 18px; 
+    }
+}
 /*================ CONTACT =================================================================================================================================================== */
 
 .contact{
@@ -804,42 +829,77 @@ header{
     margin-top: 10px;
  }
 
+ /*------------ DESKTOP  -------------------------------------------------------*/
 
-/*================ FOOTER =================================================================================================================================================== */
+@media screen and (min-width: 848px) {
+    .contact {
+        border: none;
+    }
+    
+    .contact {
+        position: relative;  
+        max-width: 1175px; 
+        margin: 130px auto;  
+    }
 
-.footer-in{
+    
+    .contact-in {
+        width: 100%; 
+        margin: 0;  
+        padding: 60px 80px; 
+    }
+    
+   
+    .contact-content {
+        margin-left: 0;
+        padding-top: 0;
+        max-width: 580px; 
+    }
+
+    .contact-content h2 {
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .contact-content p {
+        padding: 0;
+        margin-top: 1rem;
+        max-width: 500px;
+    }
+    
+    .contact-content .contact-btn-holder {
+        padding: 0;
+        margin-top: 3.5rem;
+    }
+
+    .contact-image-holder {
+        position: absolute; 
+        bottom: -100px;  
+        right: -140px;       
+        width: 58%;     
+        height: auto;;
+    }
+    
+    .contact-image {
+        width: 100%;
+        height: 100%;
+        background-image: url('./Images/Girl_With_Laptop.png');
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        padding-top: 100%; 
+    }
+}
+
+/*================ FOOTER  =================================================================================================================================================== */
+
+.footer-in {
     background-color: var(--secondary-color);
     padding: 0 32px;
     border-top: solid 1px #000;
 }
 
-.footer-list{
+.footer-list {
     display: none;
-}
-
-.footer-socials img{
-    width: 20px;
-    height: auto;
-}
-
-.footer-form{
-   font-family: var(--text-font); 
-   border-bottom: solid 1px var(--gray-color);
-   padding: 16px 0;
-   margin-top: 26px;
-   margin-bottom: 18px;
-   width: 100%;
-}
-
-.footer-in button{
-    width: fit-content;
-    margin-bottom: 60px
-}
-.footer-socials{
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 1rem;
 }
 
 .footer-content h3 {
@@ -848,7 +908,35 @@ header{
    margin-right: 1rem;
 }
 
-.footer-terms ul{
+
+.footer-email-input {
+    font-family: var(--text-font); 
+    border-bottom: solid 1px var(--gray-color);
+    padding: 16px 0;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+
+.footer-actions .btn {
+    margin-bottom: 60px;
+    margin-top: 18px; 
+    width: 140px;;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 1rem;
+}
+
+.footer-socials img {
+    width: 20px;
+    height: auto;
+}
+
+.footer-terms ul {
     font-family: var(--text-font);
     font-size: 14px;
     font-weight: 500;
@@ -861,11 +949,11 @@ header{
     width: 100%;
 }
 
-.footer-terms li a{
+.footer-terms li a {
     color: var(--black-color);
 }
 
-.footer-copyright p{
+.footer-copyright p {
     text-align: center;
     font-weight: 500;
     font-size: 14px;
@@ -873,4 +961,116 @@ header{
     padding-bottom: 58px;
 }
 
+/*------------ DESKTOP  -------------------------------------------------------*/
+
+@media screen and (min-width: 848px) {
+
+    .footer-in {
+        padding: 10px 100px; /
+    }
+
+    .footer-top-container {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start; 
+        gap: 40px; 
+        border-bottom: 1px solid var(--gray-color);
+        padding-bottom: 100px;
+    }
+
+    .footer-content {
+        flex-basis: 45%;
+        padding-left: 20px; 
+    }
+
+    .footer-content h3, .footer-content p{
+        max-width: 360px;
+    }
+
+    .footer-content p{
+        margin-bottom: 3.5rem;
+    }
+
+    .footer-actions {
+        display: flex;
+        align-items: center; 
+        margin-top: 40px;
+        padding-bottom: 8px;
+    }
+
+    .footer-email-input {
+        flex-grow: 1;
+        background: none;
+        outline: none;
+        margin: 0;
+        width: auto;
+        font-size: 16px;
+        max-width: 360px;
+    }
+
+    .footer-actions .btn {
+        margin: 0; 
+        width: auto; 
+        white-space: nowrap; 
+        margin-left: 16px;
+    }
+    
+    
+    .footer-list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.3px solid var(--gray-color);
+        padding: 1rem 0;
+        cursor: pointer;
+    }
+
+    .footer-list {
+        display: block; 
+        flex-basis: 32%; 
+        margin-top: 3rem;
+    }
+
+    .footer-list .light-subtitle {
+        font-weight: 500;
+    }
+
+    .footer-list .subtitle{
+        margin-bottom: 2rem;
+    }
+
+    .footer-list-item {
+        padding-top: 25px;
+    }
+
+
+    .footer-bottom {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr; 
+        align-items: center;
+        margin-top: 40px;
+        padding-left: 20px;
+        padding-bottom: 30px;
+    }
+    
+    /* Coluna 1: Ícones Sociais (Alinhados à Esquerda) */
+    .footer-socials {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    /* Coluna 2: Links dos Termos (Permanecem no Centro) */
+    .footer-terms ul {
+        justify-content: flex-start;
+        margin: 0;
+        
+    }
+
+    /* Coluna 3: Copyright (Alinhado à Direita) */
+    .footer-copyright p {
+        text-align: right;
+        margin: 0;
+        padding: 0;
+    }
+}
 
